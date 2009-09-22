@@ -10,3 +10,6 @@ General philosophy:
 
 - Unlike other stack-based languages like Forth, Cat, etc, there should be as little 'lookahead' as possible. Things like word definition and 'if' are not special; you put items on the stack and call 'define' or 'if', rather than having a special construct.
 
+- Unlike my earlier attempts at stack-based languages, this one uses an explicit "command stack" (inspired by Dollop (also here on github) which has an explicit call stack). Executing a user-defined word simply means, that the words making up the first word's definition, are put on the command stack, to be executed in the next evaluation step. This way we achieve the stack-oriented equivalent of "tail recursion" (sort of).
+
+- The above implies that built-in words cannot just evaluate subexpressions willy-nilly; rather, they need to manipulate the command stack accordingly.
