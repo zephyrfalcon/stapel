@@ -1,0 +1,36 @@
+#
+
+- command stack
+- data stack (is really a stack of stacks)
+
+- command stack consists of parsed objects... maybe CmdString, CmdInteger,
+  CmdFloat, CmdSymbol, CmdName, etc. When executed, these do something, like
+  pushing a value onto the stack, or executing a word.
+
+- data stack contains Python objects whenever possible (to make bridging with
+  Python code easier).  not always possible, e.g. with symbols and word
+  references.
+
+A word can be:
+
+- an integer                3, -1
+- a float                   3.1415
+- a string literal          "hello world"
+- a symbol                  :foo
+- a name                    bar
+
+All these should have their own little command classes.
+
+On the data stack, we can have:
+
+- Python integer
+- Python float
+- Python string
+- Python boolean
+- Symbol
+- Lambda
+- Python function?
+- Python list
+- Python module?
+- ...
+

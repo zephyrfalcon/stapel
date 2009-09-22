@@ -1,0 +1,25 @@
+
+- stack-based language
+- written in Python (2.6 probably)
+- Python bridge
+- NO local vars; use stack instead (that is the idea anyway)
+- reuse ideas from llizard/manta: stack of stacks, lambda-words, etc
+- NO forward declarations like Cat, Forth, Factor, etc;
+  don't use:    : foo ... ;
+  rather:       :foo ( ...words... ) defword
+  or something like that!
+- use short names; put special characters to good use
+- unicode? (e.g. UTF-16)
+- use substitution when executing words
+- symbols
+- use Python data types where possible
+- use functional stuff where possible? i.e. immutable
+- global namespace holds words and variables
+- modules?
+- dictionaries?
+
+
+later:
+
+- demo program: use Python/Tkinter turtle
+
