@@ -1,0 +1,12 @@
+# Quick overview
+
+[in progress...]
+
+Stapel is a stack-oriented language, written in Python. Mostly for experiments and learning.
+
+General philosophy:
+
+- It's closely related to Python; Python types are used where possible. (So numbers, strings, lists, etc, are Python builtins. Special classes are only used if there is no direct equivalent in Python, e.g. for symbols.)
+
+- Unlike other stack-based languages like Forth, Cat, etc, there should be as little 'lookahead' as possible. Things like word definition and 'if' are not special; you put items on the stack and call 'define' or 'if', rather than having a special construct.
+
