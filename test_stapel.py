@@ -28,6 +28,8 @@ TESTDATA = [
     ("true 3 4 choice", "3"),
     ("false 3 4 choice", "4"),
     ("true ( 3 ) ( 4 ) if", "3"),
+    ("1 2 3 dupd", "1 2 2 3"),
+    ("1 2 3 swapd", "2 1 3"),
 ]
 
 class TestStapel(unittest.TestCase):
